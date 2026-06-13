@@ -207,7 +207,7 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
   <div class="lens-info">
     <h2>Inside the <span>Lens</span></h2>
     <div class="data-row"><div class="val">0.11</div><div class="unit">mm</div><div class="desc">membrane shift<br>= +2 Diopters</div></div>
-    <div class="data-row"><div class="val">±8D</div><div class="unit">range</div><div class="desc">−8D to +8D<br>16 diopters total</div></div>
+    <div class="data-row"><div class="val">±25D</div><div class="unit">range</div><div class="desc">−25D to +25D<br>16 diopters total</div></div>
     <div class="data-row"><div class="val">1.456</div><div class="unit">n</div><div class="desc">glycerol refractive<br>index · non-toxic</div></div>
   </div>
 </section>
@@ -221,7 +221,7 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
 <section id="stats">
   <div class="label">Performance</div>
   <div class="stats-row">
-    <div class="stat"><div class="sv">−8 to +8</div><div class="su">Diopters</div><div class="sd">Full adjustable<br>range</div></div>
+    <div class="stat"><div class="sv">−25 to +25</div><div class="su">Diopters</div><div class="sd">Full adjustable<br>range</div></div>
     <div class="stat"><div class="sv">0.11mm</div><div class="su">= +2D</div><div class="sd">Membrane shift<br>to power change</div></div>
     <div class="stat"><div class="sv">±0.25</div><div class="su">D Drift</div><div class="sd">Temperature<br>controlled</div></div>
   </div>
@@ -234,45 +234,18 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
 
 <section id="control">
   <h2>Live <span>Control</span></h2>
-  <p class="sub">Bluetooth pump · real-time diopter</p>
-  <div class="ctl-card">
-    <div class="ctl-status"><span class="ctl-dot" id="ctlDot"></span><span id="ctlStatus">Disconnected</span><span id="ctlBat" style="color:#444;margin-left:8px">🔋 —</span></div>
-
-    <div class="ctl-readout-wrap">
-      <div class="ctl-readout" id="ctlValD">+0.00<span>D</span></div>
-      <div class="ctl-readlabel" id="ctlMode">Standard mode</div>
-    </div>
-
-    <div class="ctl-canvases">
-      <canvas id="ctlCv"></canvas>
-    </div>
-
-    <div class="ctl-presets">
-      <button class="ctl-preset" id="ctlPnear" data-m="near"><span class="pi">📱</span>Near</button>
-      <button class="ctl-preset am" id="ctlPmid" data-m="mid"><span class="pi">👁️</span>Standard</button>
-      <button class="ctl-preset" id="ctlPfar" data-m="far"><span class="pi">🔭</span>Far</button>
-    </div>
-
-    <div class="ctl-slider-wrap">
-      <div class="ctl-sl-hdr"><span>Fine tune</span><span class="ctl-sl-val" id="ctlSlVal">0.00 D</span></div>
-      <input type="range" id="ctlSlider" min="-400" max="400" step="25" value="0">
-      <div class="ctl-sl-range"><span>−4.0D near</span><span>0</span><span>+4.0D far</span></div>
-    </div>
-
-    <div class="ctl-sensors">
-      <div class="ctl-sensor"><div class="sl">Pump pressure</div><div class="sv" id="ctlPress">— kPa</div></div>
-      <div class="ctl-sensor"><div class="sl">Fluid temp</div><div class="sv" id="ctlTemp">— °C</div></div>
-      <div class="ctl-sensor"><div class="sl">Last command</div><div class="sv" id="ctlCmd">—</div></div>
-      <div class="ctl-sensor"><div class="sl">Adjustments</div><div class="sv" id="ctlCount">0</div></div>
-    </div>
-
-    <div class="ctl-btns">
-      <button class="ctl-btn ctl-connect" id="ctlConnect">Connect Glasses</button>
-      <button class="ctl-btn ctl-halt" id="ctlHalt">Halt Pump</button>
-    </div>
-    <button class="ctl-btn ctl-demo" id="ctlDemo" style="margin-top:2px">Demo Mode (no hardware)</button>
+  <p class="sub">Bluetooth pump · real-time diopter calibration</p>
+  
+  <div class="ctl-card" style="text-align: center; padding: 40px 20px;">
+    <p style="margin-bottom: 24px; font-size: 1.1rem; color: #ccc;">
+      Access the interactive hardware dashboard to pair, tune, and test the FluidVision system.
+    </p>
+    <a href="/controller" class="ctl-btn ctl-connect" style="display: inline-block; text-decoration: none; padding: 14px 28px;">
+      Launch Control Panel
+    </a>
   </div>
-  <p class="ctl-note">Core protocol from JustAnApp: <b>!P:&lt;ms&gt;#</b> drives the pump, <b>!H:0#</b> halts. Web Bluetooth (Chrome/Edge) over Nordic UART, or tap <b>Demo Mode</b> — no device needed for judges.</p>
+  
+  <p class="ctl-note">Core protocol from JustAnApp: <b>!P:&lt;ms&gt;#</b> drives the pump, <b>!H:0#</b> halts. Web Bluetooth (Chrome/Edge) over Nordic UART supported natively in the external application.</p>
 </section>
 
 <section id="closing">
