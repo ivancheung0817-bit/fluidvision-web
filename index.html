@@ -106,65 +106,6 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
 .brand.vis{opacity:1;}
 .team{margin-top:40px;font-size:10px;letter-spacing:.22em;color:#2a2a2a;opacity:0;transition:opacity.7s .6s;}
 .team.vis{opacity:1;}
-
-/* CONTROL */
-#control{flex-direction:column;text-align:center;padding:80px 24px;}
-#control h2{font-size:clamp(26px,4vw,48px);font-weight:700;margin-bottom:8px;}
-#control h2 span{color:var(--blue);}
-#control .sub{font-size:10px;letter-spacing:.4em;color:#555;text-transform:uppercase;margin-bottom:34px;}
-.ctl-card{width:min(440px,92vw);background:#08080a;border:1px solid #161616;border-radius:24px;padding:24px 22px;display:flex;flex-direction:column;gap:16px;}
-.ctl-status{display:flex;align-items:center;justify-content:center;gap:9px;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#555;}
-.ctl-dot{width:8px;height:8px;border-radius:50%;background:#444;transition:background.3s,box-shadow.3s;}
-.ctl-dot.on{background:#2ecc71;box-shadow:0 0 10px #2ecc71;}
-.ctl-dot.demo{background:#f5a623;box-shadow:0 0 10px #f5a623;}
-/* single readout */
-.ctl-readout-wrap{text-align:center;}
-.ctl-readout{font-size:clamp(48px,11vw,68px);font-weight:700;line-height:1;letter-spacing:-2px;color:#fff;transition:color.4s;}
-.ctl-readout span{font-size:18px;color:var(--blue);font-weight:400;margin-left:4px;letter-spacing:.1em;}
-.ctl-readout.near{color:#06b6d4;} .ctl-readout.far{color:#8b5cf6;}
-.ctl-readlabel{font-size:9px;letter-spacing:.4em;color:#3a3a3a;text-transform:uppercase;margin-top:6px;}
-/* lens canvas */
-.ctl-canvases{display:flex;}
-.ctl-canvases canvas{flex:1;height:90px;border-radius:12px;background:#0d0d10;border:1px solid #1a1a1d;display:block;}
-.ctl-halt{background:#1a0d0d;color:#ff6b6b;border:1px solid #3a1a1a;}
-.ctl-halt:hover{border-color:#ff6b6b;}
-/* presets */
-.ctl-presets{display:flex;gap:10px;}
-.ctl-preset{flex:1;padding:13px 0;border-radius:13px;background:#0d0d10;border:1px solid #1a1a1d;color:#888;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all.25s;display:flex;flex-direction:column;gap:3px;align-items:center;}
-.ctl-preset .pi{font-size:16px;}
-.ctl-preset:hover{color:#fff;}
-.ctl-preset.an{border-color:#06b6d4;color:#06b6d4;background:rgba(6,182,212,.07);}
-.ctl-preset.am{border-color:var(--blue);color:var(--blue);background:rgba(0,113,227,.07);}
-.ctl-preset.af{border-color:#8b5cf6;color:#8b5cf6;background:rgba(139,92,246,.07);}
-/* link + slider */
-.ctl-linkrow{display:flex;align-items:center;gap:8px;font-size:11px;color:#555;}
-.ctl-tog{width:36px;height:21px;border-radius:11px;background:#1a1a1d;position:relative;cursor:pointer;transition:background.2s;}
-.ctl-tog.on{background:var(--blue);}
-.ctl-tog::after{content:'';position:absolute;width:15px;height:15px;border-radius:50%;background:#fff;top:3px;left:3px;transition:transform.2s;}
-.ctl-tog.on::after{transform:translateX(15px);}
-.ctl-mode{margin-left:auto;color:var(--blue);font-size:11px;}
-.ctl-eyetabs{display:none;gap:6px;}
-.ctl-eyetabs.show{display:flex;}
-.ctl-eyetab{flex:1;padding:7px;font-size:11px;border-radius:9px;cursor:pointer;color:#555;border:1px solid transparent;transition:all.2s;}
-.ctl-eyetab.on{background:#15151a;color:#fff;border-color:#262630;}
-.ctl-slider-wrap{text-align:left;}
-.ctl-sl-hdr{display:flex;justify-content:space-between;font-size:11px;color:#555;margin-bottom:8px;}
-.ctl-sl-val{color:#fff;font-weight:700;}
-.ctl-slider-wrap input[type=range]{width:100%;accent-color:var(--blue);height:4px;cursor:pointer;}
-.ctl-sl-range{display:flex;justify-content:space-between;font-size:9px;color:#3a3a3a;margin-top:6px;}
-/* sensors */
-.ctl-sensors{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.ctl-sensor{background:#0d0d10;border:1px solid #1a1a1d;border-radius:10px;padding:9px 11px;text-align:left;}
-.ctl-sensor .sl{font-size:9px;color:#555;letter-spacing:.1em;text-transform:uppercase;}
-.ctl-sensor .sv{font-size:13px;font-weight:600;color:#ccc;margin-top:3px;}
-/* buttons */
-.ctl-btns{display:flex;gap:10px;}
-.ctl-btn{flex:1;padding:14px 0;border-radius:13px;border:none;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;font-weight:600;transition:opacity.2s,box-shadow.2s;}
-.ctl-connect{background:var(--blue);color:#fff;}
-.ctl-connect:hover{box-shadow:0 8px 24px rgba(0,113,227,.35);}
-.ctl-demo{background:transparent;color:#888;border:1px solid #1d1d1d;}
-.ctl-demo:hover{color:#fff;border-color:#333;}
-.ctl-note{font-size:9px;letter-spacing:.08em;color:#2a2a2a;margin-top:16px;max-width:400px;line-height:1.7;align-self:center;}
 </style>
 </head>
 <body>
@@ -178,7 +119,6 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
     <a href="#lens-section">Lens</a>
     <a href="#how">How It Works</a>
     <a href="#stats">Data</a>
-    <a href="#control">Control</a>
   </div>
 </nav>
 
@@ -221,7 +161,7 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
 <section id="stats">
   <div class="label">Performance</div>
   <div class="stats-row">
-    <div class="stat"><div class="sv">−1 to +1</div><div class="su">Diopters</div><div class="sd">Full adjustable<br>range</div></div>
+    <div class="stat"><div class="sv">−8 to +8</div><div class="su">Diopters</div><div class="sd">Full adjustable<br>range</div></div>
     <div class="stat"><div class="sv">0.11mm</div><div class="su">= +2D</div><div class="sd">Membrane shift<br>to power change</div></div>
     <div class="stat"><div class="sv">±0.25</div><div class="su">D Drift</div><div class="sd">Temperature<br>controlled</div></div>
   </div>
@@ -230,22 +170,6 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
 <section id="markets">
   <div class="mkt"><div class="mt">Clinical</div><h3>Replace the<br>trial lens kit.</h3><p>−10D to +10D seamless.<br>Higher refraction accuracy.<br>Enables tele-optometry.</p></div>
   <div class="mkt"><div class="mt">Consumer</div><h3>One pair.<br>Every distance.</h3><p>Near. Far. Everything between.<br>No switching. No compromise.</p></div>
-</section>
-
-<section id="control">
-  <h2>Live <span>Control</span></h2>
-  <p class="sub">Bluetooth pump · real-time diopter calibration</p>
-  
-  <div class="ctl-card" style="text-align: center; padding: 40px 20px;">
-    <p style="margin-bottom: 24px; font-size: 1.1rem; color: #ccc;">
-      Access the interactive hardware dashboard to pair, tune, and test the FluidVision system.
-    </p>
-    <a href="/fluidvision-web/controller" class="ctl-btn ctl-connect" style="display: inline-block; text-decoration: none; padding: 14px 28px;">
-      Launch Control Panel
-    </a>
-  </div>
-  
-  <p class="ctl-note">Core protocol from JustAnApp: <b>!P:&lt;ms&gt;#</b> drives the pump, <b>!H:0#</b> halts. Web Bluetooth (Chrome/Edge) over Nordic UART supported natively in the external application.</p>
 </section>
 
 <section id="closing">
@@ -477,131 +401,6 @@ const pts=Array.from({length:140},()=>({x:Math.random()*innerWidth,y:Math.random
 // ── SCROLL ANIMATIONS
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.data-row,.sv,.cl,.brand,.team').forEach((el,i)=>{setTimeout(()=>el.classList.add('vis'),i*140);});});},{threshold:.2});
 document.querySelectorAll('section').forEach(s=>obs.observe(s));
-
-// ── BLUETOOTH PUMP CONTROL
-// Core engine = JustAnApp protocol (text commands over BLE Nordic UART):
-//   sendPumpCommand(ms) → "!P:<ms>#"   ·   sendHaltCommand() → "!H:0#"
-// Web additions (from FluidVision Controller, not in app): presets,
-//   fine slider, animated lens, demo mode, live sensors.
-(function(){
-  // Nordic UART Service — carries the app's text commands over BLE
-  const NUS='6e400001-b5a3-f393-e0a9-e50e24dcca9e';
-  const NUS_TX='6e400002-b5a3-f393-e0a9-e50e24dcca9e';
-  const MS_PER_DIOPTER=180;            // calibration: |ΔD| × 180ms pump run
-  const $=id=>document.getElementById(id);
-  const S={d:0,tx:null,demo:false,count:0,lastApplied:0};
-  const PRESETS={near:{d:-250,label:'Near mode',cls:'near'},mid:{d:0,label:'Standard mode',cls:''},far:{d:250,label:'Far mode',cls:'far'}};
-
-  const fmt=v=>(v>=0?'+':'')+(v/100).toFixed(2);
-  const cls=v=>v<-50?'near':v>50?'far':'';
-
-  function refresh(){
-    $('ctlValD').innerHTML=fmt(S.d)+'<span>D</span>';
-    $('ctlValD').className='ctl-readout '+cls(S.d);
-    $('ctlSlider').value=S.d; $('ctlSlVal').textContent=fmt(S.d)+' D';
-  }
-
-  let raf;
-  function animateTo(t){
-    if(raf)cancelAnimationFrame(raf);
-    const s=S.d,t0=performance.now(),DUR=550;
-    (function step(t1){const f=1-Math.pow(1-Math.min((t1-t0)/DUR,1),3);
-      S.d=Math.round(s+(t-s)*f); refresh(); if(f<1)raf=requestAnimationFrame(step);})(t0);
-    applyPump(t);            // fire the app command toward the target
-  }
-
-  // ── App core: sendPumpCommand / sendHaltCommand ──
-  async function sendData(str){
-    $('ctlCmd').textContent=str; S.count++; $('ctlCount').textContent=S.count;
-    if(!S.tx)return;                                   // demo / not connected
-    try{await S.tx.writeValue(new TextEncoder().encode(str));}catch(e){}
-  }
-  let pumpT;
-  function applyPump(targetD){
-    clearTimeout(pumpT);
-    pumpT=setTimeout(()=>{
-      const ms=Math.round(Math.abs(targetD-S.lastApplied)*MS_PER_DIOPTER/100);
-      S.lastApplied=targetD;
-      sendData('!P:'+ms+'#');                          // JustAnApp pump command
-    },60);
-  }
-  function sendHalt(){ sendData('!H:0#'); }             // JustAnApp halt command
-
-  function setPreset(m){
-    const p=PRESETS[m]; $('ctlMode').textContent=p.label;
-    ['near','mid','far'].forEach(x=>$('ctlP'+x).className='ctl-preset'+(x===m?(PRESETS[x].cls?' '+PRESETS[x].cls.replace('near','an').replace('far','af'):' am'):''));
-    animateTo(p.d);
-  }
-
-  document.querySelectorAll('.ctl-preset').forEach(b=>b.onclick=()=>setPreset(b.dataset.m));
-  $('ctlSlider').addEventListener('input',function(){
-    ['near','mid','far'].forEach(x=>$('ctlP'+x).className='ctl-preset');
-    $('ctlMode').textContent='Manual'; animateTo(+this.value);
-  });
-  $('ctlHalt').onclick=sendHalt;
-
-  // ── animated lens canvas ──
-  let T=0;
-  function drawLens(cv,d100){
-    const r=cv.getBoundingClientRect(),W=r.width,H=r.height,ctx=cv.getContext('2d');
-    ctx.clearRect(0,0,W,H);
-    const cx=W/2,cy=H/2,rx=W*.46,ry=H*.40,norm=(d100+400)/800,fill=.18+norm*.63,wave=Math.sin(T/900)*1.8,fillY=cy+ry*(1-2*fill)+wave;
-    ctx.save();ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,0,0,7);ctx.clip();
-    const c=d100<-75?'#0891b2':d100>75?'#7c3aed':'#0071E3';
-    const g=ctx.createLinearGradient(cx,fillY,cx,cy+ry);g.addColorStop(0,c+'bb');g.addColorStop(1,c+'33');
-    ctx.fillStyle=g;ctx.fillRect(0,fillY,W,H);
-    ctx.beginPath();ctx.moveTo(0,fillY+wave);
-    for(let x=0;x<=W;x+=3){ctx.lineTo(x,fillY+Math.sin(x/W*Math.PI*5+T/600)*2.5);}
-    ctx.lineTo(W,0);ctx.lineTo(0,0);ctx.closePath();ctx.fillStyle='rgba(255,255,255,.04)';ctx.fill();
-    ctx.restore();
-    ctx.beginPath();ctx.ellipse(cx,cy,rx,ry,0,0,7);ctx.strokeStyle='#0071E3';ctx.lineWidth=1.5;ctx.stroke();
-    const conv=norm*2-1;ctx.globalAlpha=.28;
-    for(let i=0;i<3;i++){const sy=cy-ry*.4+i*ry*.4,dy=cy+conv*(sy-cy)*.45+cy;
-      ctx.beginPath();ctx.moveTo(0,sy);ctx.quadraticCurveTo(cx,cy+conv*ry*.35,W,dy);
-      ctx.strokeStyle=d100<-75?'#22d3ee':d100>75?'#a78bfa':'#6db3ff';ctx.lineWidth=.9;ctx.stroke();}
-    ctx.globalAlpha=1;
-  }
-  function startRender(){
-    const cv=$('ctlCv');
-    function rsz(){const dpr=devicePixelRatio||1,r=cv.getBoundingClientRect();cv.width=r.width*dpr;cv.height=r.height*dpr;cv.getContext('2d').scale(dpr,dpr);}
-    rsz();new ResizeObserver(rsz).observe(cv);
-    (function loop(t){T=t;drawLens(cv,S.d);requestAnimationFrame(loop);})(0);
-  }
-
-  function setStatus(mode){
-    const dot=$('ctlDot');
-    if(mode==='on'){dot.className='ctl-dot on';$('ctlStatus').textContent='Connected';}
-    else if(mode==='demo'){dot.className='ctl-dot demo';$('ctlStatus').textContent='Demo';}
-    else{dot.className='ctl-dot';$('ctlStatus').textContent='Disconnected';}
-  }
-
-  // ── connect (BLE Nordic UART, carries app commands) ──
-  $('ctlConnect').onclick=async()=>{
-    if(!navigator.bluetooth){alert('Web Bluetooth needs Chrome or Edge');return;}
-    try{
-      const dev=await navigator.bluetooth.requestDevice({filters:[{namePrefix:'FluidVision'},{services:[NUS]}],optionalServices:[NUS,'battery_service']});
-      dev.addEventListener('gattserverdisconnected',()=>{setStatus('off');S.tx=null;});
-      const srv=await dev.gatt.connect();
-      const svc=await srv.getPrimaryService(NUS);
-      S.tx=await svc.getCharacteristic(NUS_TX);
-      try{const bs=await srv.getPrimaryService('battery_service');const bc=await bs.getCharacteristic('battery_level');
-        const bv=await bc.readValue();$('ctlBat').textContent='🔋 '+bv.getUint8(0)+'%';}catch(e){}
-      setStatus('on');setPreset('mid');
-    }catch(e){if(e.name!=='NotFoundError')alert('Connect failed: '+e.message);}
-  };
-
-  // ── demo mode ──
-  $('ctlDemo').onclick=()=>{
-    if(S.demo)return; S.demo=true; setStatus('demo'); $('ctlBat').textContent='🔋 87%';
-    const seq=['mid','near','far','mid']; let i=0;
-    setPreset('mid');
-    setInterval(()=>setPreset(seq[i++%seq.length]),3500);
-    setInterval(()=>{$('ctlPress').textContent=(Math.random()*5+2).toFixed(1)+' kPa';
-      $('ctlTemp').textContent=(Math.random()*2+22).toFixed(1)+' °C';},1200);
-  };
-
-  startRender(); refresh();
-})();
 </script>
 </body>
 </html>
