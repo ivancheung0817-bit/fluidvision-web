@@ -63,7 +63,7 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
 .lens-info{flex:1;min-width:260px;max-width:400px;}
 .lens-info h2{font-size:clamp(32px,4vw,56px);font-weight:700;margin-bottom:28px;line-height:1.1;}
 .lens-info h2 span{color:var(--blue);}
-.data-row{display:grid;grid-template-columns:clamp(180px,28vw,300px) 60px 1fr;align-items:baseline;gap:0 14px;margin-bottom:22px;opacity:0;transform:translateX(36px);transition:opacity.5s,transform.5s;}
+.data-row{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;opacity:0;transform:translateX(36px);transition:opacity.5s,transform.5s;}
 .data-row.vis{opacity:1;transform:none;}
 .data-row .val{font-size:clamp(36px,4vw,52px);font-weight:700;line-height:1;white-space:nowrap;}
 .data-row .unit{font-size:13px;color:var(--blue);letter-spacing:.12em;text-transform:uppercase;}
@@ -147,7 +147,7 @@ section{min-height:100vh;scroll-snap-align:start;display:flex;align-items:center
   <div class="lens-info">
     <h2>Inside the <span>Lens</span></h2>
     <div class="data-row"><div class="val">0.11</div><div class="unit">mm</div><div class="desc">membrane shift<br>= +2 Diopters</div></div>
-    <div class="data-row"><div class="val">−1D to +1D</div><div class="unit">range</div><div class="desc">−1 to +1<br>diopters total</div></div>
+    <div class="data-row"><div class="val">±1D</div><div class="unit">range</div><div class="desc">−1 to +1<br>diopters total</div></div>
     <div class="data-row"><div class="val">1.456</div><div class="unit">n</div><div class="desc">glycerol refractive<br>index · non-toxic</div></div>
   </div>
 </section>
